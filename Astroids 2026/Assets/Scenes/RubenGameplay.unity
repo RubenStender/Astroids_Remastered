@@ -339,7 +339,7 @@ MonoBehaviour:
   preset1:
     presetName: Asteroids 01
     thrustForce: 5
-    maxSpeed: 8
+    maxSpeed: 5
     drag: 0.001
     rotationSpeed: 180
     wrapPadding: 0.74
@@ -347,14 +347,14 @@ MonoBehaviour:
     presetName: Asteroids 02
     thrustForce: 3
     maxSpeed: 5
-    drag: 0.005
+    drag: 0.004
     rotationSpeed: 100
     wrapPadding: 0.74
   preset3:
     presetName: Asteroids 03
     thrustForce: 10
     maxSpeed: 25
-    drag: 0.004
+    drag: 0.002
     rotationSpeed: 300
     wrapPadding: 0.74
   movementScript: {fileID: 1583705012}
