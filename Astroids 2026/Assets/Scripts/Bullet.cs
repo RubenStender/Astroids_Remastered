@@ -16,7 +16,6 @@ public class Bullet : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        // change asteroid component to sams component name
         AstroidDamage asteroid = other.GetComponent<AstroidDamage>();
         if (asteroid != null)
         {

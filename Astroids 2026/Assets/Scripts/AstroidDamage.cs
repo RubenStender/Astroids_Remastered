@@ -1,5 +1,5 @@
 using UnityEngine;
-public class AsteroidDamage : MonoBehaviour
+public class AstroidDamage : MonoBehaviour
 {
     public enum AsteroidSize { Large, Medium, Small }
 
