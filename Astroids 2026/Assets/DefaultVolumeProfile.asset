@@ -322,6 +322,9 @@ MonoBehaviour:
   highQualityFiltering:
     m_OverrideState: 1
     m_Value: 0
+  filter:
+    m_OverrideState: 1
+    m_Value: 0
   downscale:
     m_OverrideState: 1
     m_Value: 0
@@ -506,6 +509,7 @@ MonoBehaviour:
   - {fileID: -8186968272690591729}
   - {fileID: -3978695733392391637}
   - {fileID: -1083910812058648046}
+  - {fileID: 8223555691627115500}
 --- !u!114 &156332030701414761
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -744,6 +748,61 @@ MonoBehaviour:
     m_OverrideState: 1
     m_Value: 0
   saturation:
+    m_OverrideState: 1
+    m_Value: 0
+--- !u!114 &8223555691627115500
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d1de8e0671aeee4c9e46e8ff7e452cc, type: 3}
+  m_Name: VHSVolumeComponent
+  m_EditorClassIdentifier: Assembly-CSharp::VHSVolumeComponent
+  active: 1
+  intensity:
+    m_OverrideState: 1
+    m_Value: 0
+  colorBleedingIntensity:
+    m_OverrideState: 1
+    m_Value: 0.5
+  colorBleedRadius:
+    m_OverrideState: 1
+    m_Value: 0.5
+  colorBleedDirection:
+    m_OverrideState: 1
+    m_Value: 0
+  grainScale:
+    m_OverrideState: 1
+    m_Value: 0.1
+  grainIntensity:
+    m_OverrideState: 1
+    m_Value: 0.1
+  smearIntensity:
+    m_OverrideState: 1
+    m_Value: 0
+  stripeNoiseDensity:
+    m_OverrideState: 1
+    m_Value: 0.1
+  stripeNoiseOpacity:
+    m_OverrideState: 1
+    m_Value: 1
+  edgeIntensity:
+    m_OverrideState: 1
+    m_Value: 0.5
+  edgeDistance:
+    m_OverrideState: 1
+    m_Value: 0.002
+  crtSize:
+    m_OverrideState: 1
+    m_Value: 1
+  crtPixelIntensity:
+    m_OverrideState: 1
+    m_Value: 0
+  crtScanLineIntensity:
     m_OverrideState: 1
     m_Value: 0
 --- !u!114 &8549655192814258499
