@@ -7,7 +7,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     [Header("Lifetime")]
-    public float lifetime = 10.5f;       // auto-destroy after this many seconds
+    public float lifetime = 1.0f;       // auto-destroy after this many seconds
 
     void Start()
     {

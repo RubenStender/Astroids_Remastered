@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -1141062192721102574}
   - component: {fileID: 7913152620597635313}
   - component: {fileID: 1067490718626343569}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Asteroid Large
   m_TagString: Bullet
   m_Icon: {fileID: 0}
@@ -147,8 +147,10 @@ MonoBehaviour:
   splitPrefab: {fileID: 4080515900134544446, guid: f8d6400d7b21b7c4690d702d66533164, type: 3}
   splitCount: 2
   largeScale: 1
-  mediumScale: 0.55
-  smallScale: 0.28
+  mediumScale: 1
+  smallScale: 0.08
+  minSpeed: 2
+  maxSpeed: 5
 --- !u!50 &7913152620597635313
 Rigidbody2D:
   serializedVersion: 5

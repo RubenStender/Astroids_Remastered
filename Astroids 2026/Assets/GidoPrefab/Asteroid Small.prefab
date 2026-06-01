@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 5782146117979055543}
   - component: {fileID: 4176862634525289327}
   - component: {fileID: -1711049535901805942}
-  m_Layer: 0
+  - component: {fileID: -5458448186007040454}
+  m_Layer: 3
   m_Name: Asteroid Small
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -169,3 +170,23 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-5458448186007040454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4080515900134544446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d64d4e901dc30eb47962fb1d62264ba6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AsteroidDamage
+  size: 2
+  splitPrefab: {fileID: 0}
+  splitCount: 2
+  largeScale: 1
+  mediumScale: 0.55
+  smallScale: 0.25
+  minSpeed: 2
+  maxSpeed: 5
