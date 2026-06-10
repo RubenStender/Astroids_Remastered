@@ -1,16 +1,22 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Shooting : MonoBehaviour
 {
     [Header("Shooting")]
     public GameObject bulletPrefab;
     public Transform firePoint;
-    public float fireRate = 0.25f;        // seconds between shots
+    public float fireRate = 0.25f;
     public float bulletSpeed = 12f;
-    private Rigidbody2D rb;
 
+    private Rigidbody2D rb;
     private float nextFireTime;
-    void HandleShooting()
+
+    void Start()
+    {
+        rb = GetComponent<Rigidbody2D>(); // ← was missing
+    }
+
+    void Update()
     {
         if ((Input.GetKey(KeyCode.Space) || Input.GetMouseButton(0))
             && Time.time >= nextFireTime)
@@ -28,8 +34,9 @@ public class Shooting : MonoBehaviour
         Rigidbody2D bRb = bullet.GetComponent<Rigidbody2D>();
         if (bRb != null)
         {
-            // Inherit ship velocity so bullets don't feel floaty
-            bRb.linearVelocity = rb.linearVelocity + (Vector2)(transform.up * bulletSpeed);
+            bRb.linearVelocity = rb != null
+                ? rb.linearVelocity + (Vector2)(transform.up * bulletSpeed)
+                : (Vector2)(transform.up * bulletSpeed); // fallback if ship has no Rigidbody2D
         }
     }
 }
