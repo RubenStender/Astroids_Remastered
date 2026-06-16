@@ -7,7 +7,9 @@ public class AsteroidsMovement : MonoBehaviour
     public float maxSpeed = 8f;
     [Range(0f, 1f)]
     public float drag = 0.02f;
-
+    [Header("Screen Shake (Thrust)")]
+    public float thrustShakeIntensity = 0.02f;
+    public float thrustShakeDuration = 0.05f;
     [Header("Rotatie")]
     public float rotationSpeed = 180f;
 
@@ -76,7 +78,12 @@ public class AsteroidsMovement : MonoBehaviour
     private void HandleThrust()
     {
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
+        {
             velocity += (Vector2)transform.up * thrustForce * Time.deltaTime;
+
+            // This constantly feeds a tiny shake into the camera as long as you accelerate
+            CameraShake.Instance?.Shake(thrustShakeIntensity, thrustShakeDuration);
+        }
     }
 
     private void ApplyDrag() => velocity *= (1f - drag);

@@ -7,6 +7,9 @@ public class Shooting : MonoBehaviour
     public Transform firePoint;
     public float fireRate = 0.25f;
     public float bulletSpeed = 12f;
+    [Header("Screen Shake")]
+    public float shootShakeIntensity = 0.05f;
+    public float shootShakeDuration = 0.1f;
 
     private Rigidbody2D rb;
     private float nextFireTime;
@@ -38,5 +41,6 @@ public class Shooting : MonoBehaviour
                 ? rb.linearVelocity + (Vector2)(transform.up * bulletSpeed)
                 : (Vector2)(transform.up * bulletSpeed); // fallback if ship has no Rigidbody2D
         }
+        CameraShake.Instance?.Shake(shootShakeIntensity, shootShakeDuration);
     }
 }

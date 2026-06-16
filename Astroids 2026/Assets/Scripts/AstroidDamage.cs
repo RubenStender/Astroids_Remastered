@@ -21,7 +21,9 @@ public class AsteroidDamage : MonoBehaviour
     [Header("Movement Settings")]
     [SerializeField] private float minSpeed = 2f;
     [SerializeField] private float maxSpeed = 5f;
-
+    [Header("Screen Shake")]
+    public float breakShakeIntensity = 0.3f;
+    public float breakShakeDuration = 0.2f;
     private Rigidbody2D rb;
 
     private void Awake()
@@ -46,6 +48,7 @@ public class AsteroidDamage : MonoBehaviour
 
     private void Explode()
     {
+        CameraShake.Instance?.Shake(breakShakeIntensity, breakShakeDuration);
         SpawnChildren();
         Destroy(gameObject);
     }
